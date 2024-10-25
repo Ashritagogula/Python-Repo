@@ -10,5 +10,7 @@ public class Compare{
         else{
             System.out.println("Strings are not Equal");
         }
+       sc.close();  
     }
+   
 }
