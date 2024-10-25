@@ -1,27 +1,27 @@
 import java.util.Scanner;
 public class Palindrome{
     public static void main(String args[]){
-        Scanner read=new Scanner(System.in);
-        String n=read.nextLine();
-        int start=0;
-        int end=n.length()-1;
-        boolean isPalindrome=true;
-        while(start<end){
-            char leftChar=Character.toLowerCase(n.charAt(start));
-            char rightChar=Character.toLowerCase(n.charAt(end));
+        Scanner read = new Scanner(System.in);
+        String n = read.nextLine();
+        boolean isPalindrome = true;
+        int start = 0;
+        int end = n.length()-1;
+        while( start < end ){
+            char leftChar = Character.toLowerCase(n.charAt(start));
+            char rightChar = Character.toLowerCase(n.charAt(end));
             if(leftChar!=rightChar){
-                isPalindrome=false;
+                isPalindrome = false;
                 break;
             }
             start++;
-            end--;
+            end--; 
         }
-        if(isPalindrome){
-            System.out.println("Palindrome");
-        }
-        else{
-            System.out.println("Not Palindrome");
-        }
+         if(isPalindrome){
+                System.out.println("Palindrome");
+            }
+            else{
+                System.out.println("Not Palindrome");
+            }
         read.close();
     }
 }
