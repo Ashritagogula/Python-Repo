@@ -1,0 +1,14 @@
+def is_ugly_number(n):
+    if n <= 0:
+        print("Not Ugly Number")
+        return
+    for factor in [2, 3, 5]:
+        while n % factor == 0:
+            n //= factor
+    if n == 1:
+        print("Ugly Number")
+    else:
+        print("Not Ugly Number")
+
+number = int(input())
+is_ugly_number(number)
