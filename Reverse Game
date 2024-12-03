@@ -1,0 +1,4 @@
+n = int(input().strip())
+if n > 0:
+    arr = input().strip().split()
+    print(' '.join(str(int(num[::-1])) for num in arr))
