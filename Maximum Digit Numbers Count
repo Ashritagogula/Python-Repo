@@ -1,0 +1,4 @@
+n = int(input())
+arr = list(map(int, input().split()))
+max_digits = max(len(str(x)) for x in arr)
+print(*sorted(set(x for x in arr if len(str(x)) == max_digits), key=arr.index))
