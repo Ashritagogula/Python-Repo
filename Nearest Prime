@@ -1,0 +1,26 @@
+def is_prime(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def nearest_prime(n):
+    if is_prime(n):
+        return n
+    
+    lower, upper = n - 1, n + 1
+    while True:
+        if is_prime(lower):
+            return lower
+        if is_prime(upper):
+            return upper
+        lower -= 1
+        upper += 1
+
+# Input handling
+t = int(input())
+for _ in range(t):
+    n = int(input())
+    print(nearest_prime(n))
